@@ -8,6 +8,8 @@ import 'firebase/auth';
 import Auth from '../components/pages/Auth/Auth';
 import Navbar from '../components/pages/Navbar/Navbar';
 import Home from '../components/pages/Home/Home';
+import MyStuff from '../components/pages/MyStuff/MyStuff';
+import New from '../components/pages/New/New';
 
 import fbConnection from '../helpers/data/connection';
 
@@ -58,6 +60,8 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 <PrivateRoute path="/home" component={Home} authed={authed} />
+                <PrivateRoute path="/mystuff" component={MyStuff} authed={authed} />
+                <PrivateRoute path="/new" component={New} authed={authed} />
                 <PublicRoute path="/auth" component={Auth} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>
