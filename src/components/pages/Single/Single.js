@@ -4,9 +4,11 @@ import React from 'react';
 import './Single.scss';
 
 const Single = (props) => {
+  const { itemId } = props.match.params;
+
   return (
     <div>
-      <h1>SINGLE STUFF</h1>
+      <h1>SINGLE ITEM: {itemId}</h1>
     </div>
   );
 };
