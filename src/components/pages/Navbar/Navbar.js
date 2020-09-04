@@ -1,8 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 const Navbar = (props) => {
   const { authed, isOpen, toggle } = props;
+
+  const signMeOut = (e) => {
+    e.preventDefault();
+    firebase.auth().signOut();
+  };
 
   const buildNavbar = () => {
     if (authed) {
@@ -11,7 +19,7 @@ const Navbar = (props) => {
           <NavLink className="text-dark mr-3" tag={NavLink} to="/home">Home</NavLink>
           <NavLink className="text-dark mr-3" tag={NavLink} to="/mystuff">My Stuff</NavLink>
           <NavLink className="text-dark mr-3" tag={NavLink} to="/new">New</NavLink>
-
+          <button className="text-dark" onClick={signMeOut} style={{ border: 0, backgroundColor: '#F8F9FA' }}>Sign Out</button>
         </nav>
       );
     }
