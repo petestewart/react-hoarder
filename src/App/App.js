@@ -10,6 +10,8 @@ import Navbar from '../components/pages/Navbar/Navbar';
 import Home from '../components/pages/Home/Home';
 import MyStuff from '../components/pages/MyStuff/MyStuff';
 import New from '../components/pages/New/New';
+import Edit from '../components/pages/Edit/Edit';
+import Single from '../components/pages/Single/Single';
 
 import fbConnection from '../helpers/data/connection';
 
@@ -60,8 +62,10 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 <PrivateRoute path="/home" component={Home} authed={authed} />
-                <PrivateRoute path="/mystuff" component={MyStuff} authed={authed} />
+                <PrivateRoute path="/stuff" component={MyStuff} authed={authed} />
                 <PrivateRoute path="/new" component={New} authed={authed} />
+                <PrivateRoute path="/edit/:itemId" component={Edit} authed={authed} />
+                <PrivateRoute path="/stuff/:itemId" component={Single} authed={authed} />
                 <PublicRoute path="/auth" component={Auth} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>

@@ -17,7 +17,7 @@ const Navbar = (props) => {
       return (
         <nav className="ml-auto">
           <NavLink className="text-dark mr-3" tag={NavLink} to="/home">Home</NavLink>
-          <NavLink className="text-dark mr-3" tag={NavLink} to="/mystuff">My Stuff</NavLink>
+          <NavLink className="text-dark mr-3" tag={NavLink} to="/stuff">My Stuff</NavLink>
           <NavLink className="text-dark mr-3" tag={NavLink} to="/new">New</NavLink>
           <button className="text-dark" onClick={signMeOut} style={{ border: 0, backgroundColor: '#F8F9FA' }}>Sign Out</button>
         </nav>

@@ -5,9 +5,9 @@ import './New.scss';
 
 const New = (props) => {
   return (
-    <div>
+    <h1>
       NEW
-    </div>
+    </h1>
   );
 };
 
