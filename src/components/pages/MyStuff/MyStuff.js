@@ -38,9 +38,9 @@ const MyStuff = (props) => {
       <h1>MY STUFF</h1>
       <div className="btn-group">
         <button className="btn btn-secondary" onClick={editStuffHandler}>Edit</button>
-        <button className="btn btn-secondary" onClick={singleItemHandler}>Single</button>
+        {/* <button className="btn btn-secondary" onClick={singleItemHandler}>Single</button> */}
       </div>
-      <AllStuff items={items} />
+      <AllStuff items={items} singleItemHandler={singleItemHandler}/>
     </div>
   );
 };
