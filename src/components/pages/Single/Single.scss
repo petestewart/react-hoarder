@@ -1,0 +1,19 @@
+.SingleItem {
+  .single-item-card {
+    border: 10px solid grey;
+    background-color: lightgrey;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    // max-height: 80vh;
+
+      img {
+      }
+
+      a {
+        color: black;
+      }
+  }
+}

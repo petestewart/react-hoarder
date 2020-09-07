@@ -7,7 +7,7 @@ import './AllStuff.scss';
 
 const AllStuff = (props) => {
   const itemCards = (allItems) => {
-    const itemList = allItems.map((item) => <ItemCard item={item} key={item.id} />);
+    const itemList = allItems.map((item) => <ItemCard item={item} key={item.id} singleItemHandler={props.singleItemHandler} />);
     return itemList;
   };
 
