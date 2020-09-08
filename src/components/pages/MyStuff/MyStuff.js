@@ -33,6 +33,14 @@ const MyStuff = (props) => {
     props.history.push(`/stuff/${itemId}`);
   };
 
+  const deleteItemHandler = (itemId) => {
+    itemsData.deleteItem(itemId)
+      .then(() => {
+        getItems();
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div className="my-stuff">
       <h1>MY STUFF</h1>
@@ -40,7 +48,7 @@ const MyStuff = (props) => {
         <button className="btn btn-secondary" onClick={editStuffHandler}>Edit</button>
         {/* <button className="btn btn-secondary" onClick={singleItemHandler}>Single</button> */}
       </div>
-      <AllStuff items={items} singleItemHandler={singleItemHandler}/>
+      <AllStuff items={items} singleItemHandler={singleItemHandler} deleteItemHandler={deleteItemHandler}/>
     </div>
   );
 };
